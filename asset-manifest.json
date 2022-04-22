@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/zarzilla-developer-challenge/static/css/main.05b252fb.css",
+    "main.css": "/zarzilla-developer-challenge/static/css/main.83d92fc2.css",
     "main.js": "/zarzilla-developer-challenge/static/js/main.f94475d0.js",
     "static/js/787.cd800f93.chunk.js": "/zarzilla-developer-challenge/static/js/787.cd800f93.chunk.js",
     "index.html": "/zarzilla-developer-challenge/index.html",
     "static/media/loading-spinner.svg": "/zarzilla-developer-challenge/static/media/loading-spinner.95f56f2c312b0b69560f0d9d2ecfecf4.svg",
-    "main.05b252fb.css.map": "/zarzilla-developer-challenge/static/css/main.05b252fb.css.map",
+    "main.83d92fc2.css.map": "/zarzilla-developer-challenge/static/css/main.83d92fc2.css.map",
     "main.f94475d0.js.map": "/zarzilla-developer-challenge/static/js/main.f94475d0.js.map",
     "787.cd800f93.chunk.js.map": "/zarzilla-developer-challenge/static/js/787.cd800f93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05b252fb.css",
+    "static/css/main.83d92fc2.css",
     "static/js/main.f94475d0.js"
   ]
 }
