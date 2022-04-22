@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/zarzilla-developer-challenge/static/css/main.009d73cf.css",
-    "main.js": "/zarzilla-developer-challenge/static/js/main.de24c214.js",
+    "main.js": "/zarzilla-developer-challenge/static/js/main.d7532c81.js",
     "static/js/787.cd800f93.chunk.js": "/zarzilla-developer-challenge/static/js/787.cd800f93.chunk.js",
     "static/media/back-button.svg": "/zarzilla-developer-challenge/static/media/back-button.f62b17b5cfba357528bec8fa976d0449.svg",
     "index.html": "/zarzilla-developer-challenge/index.html",
     "static/media/loading-spinner.svg": "/zarzilla-developer-challenge/static/media/loading-spinner.95f56f2c312b0b69560f0d9d2ecfecf4.svg",
     "main.009d73cf.css.map": "/zarzilla-developer-challenge/static/css/main.009d73cf.css.map",
-    "main.de24c214.js.map": "/zarzilla-developer-challenge/static/js/main.de24c214.js.map",
+    "main.d7532c81.js.map": "/zarzilla-developer-challenge/static/js/main.d7532c81.js.map",
     "787.cd800f93.chunk.js.map": "/zarzilla-developer-challenge/static/js/787.cd800f93.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.009d73cf.css",
-    "static/js/main.de24c214.js"
+    "static/js/main.d7532c81.js"
   ]
 }
