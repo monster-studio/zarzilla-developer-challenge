@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Show.css';
 import LoadingSpinner from './loading-spinner.svg';
 import axios from "axios";
@@ -17,10 +17,13 @@ function Show() {
   const [schedule, setSchedule] = useState([]);
   const [status, setStatus] = useState([]);
   const [genres, setGenres] = useState([]);
+  const [starring, setStarring] = useState([]);
 
   const { id } = useParams(); 
 
-  axios.get(`https://api.tvmaze.com/shows/${id}`)
+  useEffect(() => {
+
+  axios.get(`https://api.tvmaze.com/shows/${id}?embed=cast`)
   .then(res => {
     window.scrollTo(0, 0);
     setShowImage(res.data.image.medium);
@@ -31,16 +34,29 @@ function Show() {
     setSchedule(res.data.schedule.days.join(", "));
     setStatus(res.data.status);
     setGenres(res.data.genres.join(", "));
+    setStarring( res.data._embedded.cast.map((star) =>
+    <div className="starring-row">
+      <div className="starring-left-col">
+      <div className="starring-image" style={{backgroundImage: `url(${star.person.image.medium}), url(${LoadingSpinner})`}}></div>
+    </div>
+    <div className="starring-right-col">
+      <div className="starring-right-col-left-col"><span>{star.person.name}</span></div>
+      <div className="starring-right-col-right-col"><span>{star.character.name}</span></div>
+    </div>
+    </div>
+      ))
   })
   .catch(error => {
     //console.log(error.response)
   });
+
+  }, []);
     
   return (
     <div className="Show">
       <header className="App-header">
       <div className="container">
-      <h1>TV Bland</h1>
+      <h1 onClick={() => navigate(-1)}>TV Bland</h1>
       <div className="header-grid">
         <div className="tv-show-image" style={{backgroundImage: `url(${showImage}), url(${LoadingSpinner})`}}></div>
         <div className="tv-show-information">
@@ -99,15 +115,7 @@ function Show() {
           <div className="starring">
           <h3>Starring</h3>
 
-          <div className="starring-row">
-                <div className="starring-left-col">
-                  <div className="starring-image"></div>
-                </div>
-                <div className="starring-right-col">
-                  <div className="starring-right-col-left-col"><span>Genres</span></div>
-                  <div className="starring-right-col-left-col"><span>Genres</span></div>
-                </div>
-              </div>
+          {starring}
           
           </div>
       </section>

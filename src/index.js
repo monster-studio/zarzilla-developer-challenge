@@ -13,10 +13,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/:pageNumber" element={<App />}/>
-        <Route exact path="/show/" element={<NoRoute />}/>
-        <Route path="/show/:id" element={<Show />}/>
-        <Route path="*" element={<NoRoute />}/>
+        <Route path="/zarzilla-developer-challenge/:pageNumber" element={<App />}/>
+        <Route exact path="/zarzilla-developer-challenge/show/" element={<NoRoute />}/>
+        <Route path="/zarzilla-developer-challenge/show/:id" element={<Show />}/>
+        <Route path="/zarzilla-developer-challenge/*" element={<NoRoute />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

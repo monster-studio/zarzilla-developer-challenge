@@ -5,7 +5,7 @@ function NoRoute() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate('/1');
+    navigate('/zarzilla-developer-challenge/1');
   });
 
 }

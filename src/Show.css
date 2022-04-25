@@ -29,6 +29,10 @@
     padding: 2rem;
 }
 
+.Show h1 {
+    cursor:pointer;
+}
+
 .Show h2 {
     font-size: 2rem;
     font-weight: 500;
@@ -69,6 +73,7 @@
     width: 3rem;
     border-radius: 100%;
     background: #ebebeb;
+    background-size: cover;
 }
 
 .show-info-left-col, .show-info-right-col, .starring-middle-col, .starring-right-col {
@@ -80,6 +85,8 @@
 }
 
 .back-button { cursor: pointer; }
+
+.starring-right-col-right-col span { color: gray; }
 
 @media only screen and (min-width: 600px){
     .Show .App-header {

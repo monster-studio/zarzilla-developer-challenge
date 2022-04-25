@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Rating from '@mui/material/Rating';
 import './TVshow.css';
 import axios from "axios";
@@ -9,6 +9,8 @@ function TVshow(props) {
   const [showImage, setShowImage] = useState([]);
   const [showRating, setShowRating] = useState([]);
   const [showName, setShowName] = useState([]);
+
+  useEffect(() => {
 
   axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
   axios.get(`https://api.tvmaze.com/shows/${props.showID}`)
@@ -21,8 +23,11 @@ function TVshow(props) {
     //console.log(error.response)
   });
 
+  }, []);
+  
+
   return (
-    <Link to={`/show/${props.showID}`} className="tv-show">
+    <Link to={`/zarzilla-developer-challenge/show/${props.showID}`} className="tv-show">
     <div className="tv-show-image" style={{backgroundImage: `url(${showImage}), url(${LoadingSpinner})`}}></div>
     <Rating name="read-only" value={showRating} readOnly size="small"/>
     <h3>{showName}</h3>

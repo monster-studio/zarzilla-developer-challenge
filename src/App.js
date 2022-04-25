@@ -10,13 +10,13 @@ function App() {
   const navigate = useNavigate();
 
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    window.scrollTo(0, 0);
-    navigate('/'+value);
+    navigate('/zarzilla-developer-challenge/'+value);
   };
 
   const { pageNumber } = useParams();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const pageCoefficient = (30*(pageNumber-1));
     setShowsIDs(Array.from({length:30},(v,k)=>k+1+pageCoefficient));
   }, [navigate]);
